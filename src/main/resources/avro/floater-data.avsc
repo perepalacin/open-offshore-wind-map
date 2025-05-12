@@ -1,0 +1,16 @@
+{
+  "type": "record",
+  "name": "FloaterData",
+  "fields": [
+    { "name": "id", "type": "long" },
+    { "name": "platformId", "type": "long" },
+    { "name": "pitch", "type": "double" },
+    { "name": "roll", "type": "double" },
+    { "name": "yaw", "type": "double" },
+    { "name": "surge", "type": "double" },
+    { "name": "sway", "type": "double" },
+    { "name": "heave", "type": "double" },
+    { "name": "latitude", "type": "double" },
+    { "name": "longitude", "type": "double" }
+  ]
+}

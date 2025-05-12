@@ -1,0 +1,27 @@
+{
+  "type": "record",
+  "name": "EnvironmentalData",
+  "fields": [
+    { "name": "id", "type": "long" },
+    { "name": "platformId", "type": "long" },
+    { "name": "timestamp", "type": "long", "logicalType": "timestamp-millis" },
+    { "name": "waveHeight", "type": "double" },
+    { "name": "wavePeriod", "type": "double" },
+    { "name": "waterTemperature", "type": "double" },
+    { "name": "airHumidity", "type": "double" },
+    { "name": "windSpeed", "type": "double" },
+    { "name": "windDirection", "type": "double" },
+    { "name": "seaCurrentDirectionSurface", "type": "double" },
+    { "name": "seaCurrentSpeedSurface", "type": "double" },
+    { "name": "seaCurrentDirection5m", "type": "double" },
+    { "name": "seaCurrentSpeed5m", "type": "double" },
+    { "name": "seaCurrentDirection10m", "type": "double" },
+    { "name": "seaCurrentSpeed10m", "type": "double" },
+    { "name": "seaCurrentDirection15m", "type": "double" },
+    { "name": "seaCurrentSpeed15m", "type": "double" },
+    { "name": "waterGap", "type": "double" },
+    { "name": "atmosphericPressure", "type": "double" },
+    { "name": "waterSalinity", "type": "double" },
+    { "name": "phLevel", "type": "float" }
+  ]
+}

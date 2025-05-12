@@ -1,0 +1,22 @@
+{
+  "type": "record",
+  "name": "TurbineData",
+  "fields": [
+    { "name": "id", "type": "long" },
+    { "name": "turbineId", "type": "long" },
+    { "name": "timestamp", "type": "long", "logicalType": "timestamp-millis" },
+    { "name": "windDirection", "type": "double" },
+    { "name": "windSpeed", "type": "double" },
+    { "name": "rotorSpeed", "type": "double" },
+    { "name": "yawAngle", "type": "double" },
+    { "name": "pitchAngle", "type": "double" },
+    { "name": "powerOutput", "type": "double" },
+    { "name": "reactivePower", "type": "double" },
+    { "name": "gridFrequency", "type": "float" },
+    { "name": "voltage", "type": "double" },
+    { "name": "current", "type": "double" },
+    { "name": "vibrationLevels", "type": "double" },
+    { "name": "hydraulicPressure", "type": "double" },
+    { "name": "lubricantLevel", "type": "double" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "PlatformData",
+  "fields": [
+    { "name": "id", "type": "long" },
+    { "name": "farmId", "type": "long" },
+    { "name": "status", "type": "string" },
+    { "name": "totalPowerOutput", "type": "double" },
+    { "name": "totalEnergyProduced", "type": "double" },
+    { "name": "averageWindSpeed", "type": "double" },
+    { "name": "availability", "type": "double" },
+    { "name": "gridFrequency", "type": "double" },
+    { "name": "voltage", "type": "double" },
+    { "name": "powerFactor", "type": "double" },
+    { "name": "reactivePower", "type": "double" },
+    { "name": "curtailment", "type": "double" }
+  ]
+}
