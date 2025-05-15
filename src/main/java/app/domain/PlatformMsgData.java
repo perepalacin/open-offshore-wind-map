@@ -1,6 +1,6 @@
-package app.domain.dto;
+package app.domain;
 
-public class PlatformDataDto {
+public class PlatformMsgData {
 
     private long id;
     private long farmId;

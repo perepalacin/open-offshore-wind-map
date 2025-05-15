@@ -1,12 +1,13 @@
-package app.domain.dto;
+package app.domain;
 
 import java.time.OffsetDateTime;
 
-public class TurbineDataDto {
+public class TurbineMsgData {
 
     private Long id;
-    private Long turbineId;
+    private Long platformId;
     private OffsetDateTime timestamp;
+    private String turbineModel;
 
     private double windDirection;
     private double windSpeed;
@@ -23,12 +24,11 @@ public class TurbineDataDto {
     private double hydraulicPressure;
     private double lubricantLevel;
 
-    public TurbineDataDto() {
+    public TurbineMsgData() {
     }
 
-    public TurbineDataDto(Long id, Long turbineId) {
+    public TurbineMsgData(Long id) {
         this.id = id;
-        this.turbineId = turbineId;
     }
 
     public Long getId() {
@@ -39,19 +39,10 @@ public class TurbineDataDto {
         this.id = id;
     }
 
-    public Long getTurbineId() {
-        return turbineId;
-    }
-
-    public void setTurbineId(Long turbineId) {
-        this.turbineId = turbineId;
-    }
-
     @Override
     public String toString() {
         return "TurbineDataDto{" +
                 "id=" + id +
-                ", turbineId=" + turbineId +
                 '}';
     }
 }

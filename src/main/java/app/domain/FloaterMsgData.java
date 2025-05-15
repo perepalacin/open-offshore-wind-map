@@ -1,7 +1,7 @@
-package app.domain.dto;
+package app.domain;
 
 
-public class FloaterDataDto {
+public class FloaterMsgData {
 
     // Metadata
     private long id;

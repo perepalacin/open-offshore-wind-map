@@ -1,4 +1,4 @@
-package app.domain.dao;
+package app.domain;
 
 public class Coordinates {
     private double latitude;

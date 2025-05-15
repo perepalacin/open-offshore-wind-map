@@ -1,8 +1,8 @@
-package app.domain.dto;
+package app.domain;
 
 import java.time.OffsetDateTime;
 
-public class EnvironmentalDataDto {
+public class EnvironmentalMsgData {
 
     // Metadata
     private long id;
