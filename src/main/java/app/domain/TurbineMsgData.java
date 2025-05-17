@@ -7,7 +7,6 @@ public class TurbineMsgData {
     private Long id;
     private Long platformId;
     private OffsetDateTime timestamp;
-    private String turbineModel;
 
     private double windDirection;
     private double windSpeed;
