@@ -1,12 +1,20 @@
 package app.domain;
 
+import lombok.*;
+
 import java.time.OffsetDateTime;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class TurbineMsgData {
 
     private Long id;
-    private Long platformId;
-    private OffsetDateTime timestamp;
+    private Long turbineId;
+    private OffsetDateTime createdAtLocal;
+    private boolean isValid;
 
     private double windDirection;
     private double windSpeed;
@@ -22,27 +30,5 @@ public class TurbineMsgData {
     private double vibrationLevels;
     private double hydraulicPressure;
     private double lubricantLevel;
-
-    public TurbineMsgData() {
-    }
-
-    public TurbineMsgData(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Override
-    public String toString() {
-        return "TurbineDataDto{" +
-                "id=" + id +
-                '}';
-    }
 }
 
