@@ -3,6 +3,8 @@ package app.config;
 import java.util.HashMap;
 import java.util.Map;
 
+import app.domain.EnvironmentalMsgData;
+import app.domain.FloaterMsgData;
 import app.services.TurbineService;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
@@ -56,4 +58,44 @@ public class KafkaConsumerConfig {
         factory.setConsumerFactory(consumerFactory);
         return factory;
     }
+
+    @Bean
+    public ConcurrentKafkaListenerContainerFactory<String, FloaterMsgData> kafkaListenerContainerFactoryFloaterData() {
+        Map<String, Object> props = new HashMap<>();
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
+        props.put(JsonDeserializer.TRUSTED_PACKAGES, "*");
+
+        var consumerFactory = new DefaultKafkaConsumerFactory<>(
+                props,
+                new ErrorHandlingDeserializer<>(new StringDeserializer()),
+                new ErrorHandlingDeserializer<>(new JsonDeserializer<>(FloaterMsgData.class, false))
+        );
+
+        ConcurrentKafkaListenerContainerFactory<String, FloaterMsgData> factory =
+                new ConcurrentKafkaListenerContainerFactory<>();
+        factory.setConsumerFactory(consumerFactory);
+        return factory;
+    }
+
+    @Bean
+    public ConcurrentKafkaListenerContainerFactory<String, EnvironmentalMsgData> kafkaListenerContainerFactoryEnvironmentData() {
+        Map<String, Object> props = new HashMap<>();
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
+        props.put(JsonDeserializer.TRUSTED_PACKAGES, "*");
+
+        var consumerFactory = new DefaultKafkaConsumerFactory<>(
+                props,
+                new ErrorHandlingDeserializer<>(new StringDeserializer()),
+                new ErrorHandlingDeserializer<>(new JsonDeserializer<>(EnvironmentalMsgData.class, false))
+        );
+
+        ConcurrentKafkaListenerContainerFactory<String, EnvironmentalMsgData> factory =
+                new ConcurrentKafkaListenerContainerFactory<>();
+        factory.setConsumerFactory(consumerFactory);
+        return factory;
+    }
+
+
+
 }
+

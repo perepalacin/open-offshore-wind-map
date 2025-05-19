@@ -11,10 +11,28 @@ import org.springframework.kafka.config.TopicBuilder;
 public class KafkaConfig {
 
     @Bean
-    public NewTopic topic() {
+    public NewTopic turbineTopic() {
         return TopicBuilder.name("turbine-data")
                 .partitions(10)
                 .replicas(1)
                 .build();
     }
+
+    @Bean
+    public NewTopic floaterTopic() {
+        return TopicBuilder.name("floater-data")
+                .partitions(10)
+                .replicas(1)
+                .build();
+    }
+
+    @Bean
+    public NewTopic environmentTopic() {
+        return TopicBuilder.name("environment-data")
+                .partitions(10)
+                .replicas(1)
+                .build();
+    }
+
+
 }

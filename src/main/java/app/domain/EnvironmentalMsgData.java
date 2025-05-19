@@ -1,13 +1,20 @@
 package app.domain;
 
+import lombok.*;
+
 import java.time.OffsetDateTime;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@Builder
 public class EnvironmentalMsgData {
 
     // Metadata
     private long id;
     private long platformId;
     private OffsetDateTime timestamp;
+    private boolean isValid;
 
     // Environmental Conditions
     private double waveHeight;
